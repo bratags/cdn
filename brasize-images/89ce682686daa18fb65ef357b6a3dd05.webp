@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 400 400"
+  
+  
+   data-date-format="longDate"
+   version="1.1"
+   id="svg3"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg" width="400" height="599.6">
+  <defs
+     id="defs3" />
+  <rect
+     width="100%"
+     height="100%"
+     fill="#ffffff"
+     id="rect1"
+     x="0"
+     y="0" />
+  <!-- Size Text -->
+  <text
+     x="200"
+     y="280"
+     font-family="Tangerine"
+     text-anchor="middle"
+     fill="#000000"
+     id="text2"><tspan
+       font-weight="400"
+       font-size="180px"
+       id="tspan1">32</tspan><tspan
+       font-weight="700"
+       font-size="150px"
+       id="tspan2">c</tspan></text>
+  <!-- Bra Size arc text (replacing inner <svg> with <g>) -->
+  <g
+     transform="translate(104.28939,50)"
+     font-size="60px"
+     font-family="'Great Vibes'"
+     font-weight="700"
+     id="g3">
+    <defs
+       id="defs2">
+      <path
+         id="circle_outer"
+         d="m 100,175 c -41.4,0 -75,-33.6 -75,-75 0,-41.4 33.6,-75 75,-75 41.4,0 75,33.6 75,75 0,41.4 -33.6,75 -75,75 z"
+         stroke-dasharray="5, 5"
+         style="fill:none;stroke:#737373" />
+    </defs>
+    <text
+       text-anchor="middle"
+       letter-spacing="0"
+       id="text3"><textPath
+         xlink:href="#circle_outer"
+         startOffset="50%"
+         id="textPath2">Bra Size</textPath></text>
+  </g>
+</svg>
