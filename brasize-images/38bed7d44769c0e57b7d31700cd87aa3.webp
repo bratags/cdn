@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 400 400"
+  
+  
+   data-date-format="longDate"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="brasizeFlat.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg" width="400" height="599.6">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1"
+     inkscape:cx="200.5"
+     inkscape:cy="199.5"
+     inkscape:window-width="3840"
+     inkscape:window-height="2089"
+     inkscape:window-x="-8"
+     inkscape:window-y="1362"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3" />
+  <rect
+     width="100%"
+     height="100%"
+     fill="white"
+     id="rect1" />
+  <!-- Size Text -->
+  <text
+     x="50%"
+     y="280"
+     font-family="Tangerine"
+     text-anchor="middle"
+     fill="black"
+     id="text2"><tspan
+       font-weight="400"
+       font-size="180"
+       id="tspan1">32</tspan><tspan
+       font-weight="700"
+       font-size="150"
+       id="tspan2">c</tspan></text>
+  <!-- Bra Size arc text (replacing inner <svg> with <g>) -->
+  <g
+     transform="translate(104.28939,50)"
+     font-size="60px"
+     font-family="'Great Vibes'"
+     font-weight="700"
+     id="g3">
+    <defs
+       id="defs2">
+      <path
+         id="circle_outer"
+         d="m 100,175 c -41.4,0 -75,-33.6 -75,-75 0,-41.4 33.6,-75 75,-75 41.4,0 75,33.6 75,75 0,41.4 -33.6,75 -75,75 z"
+         stroke-dasharray="5, 5"
+         style="fill:none;stroke:#737373" />
+      <path
+         id="circle_inner"
+         d="m 100,10 c -49.6,0 -90,40.4 -90,90 0,49.6 40.4,90 90,90 49.6,0 90,-40.4 90,-90 0,-49.6 -40.4,-90 -90,-90 z"
+         stroke-dasharray="5, 5"
+         style="fill:none;stroke:#737373" />
+    </defs>
+    <text
+       text-anchor="middle"
+       letter-spacing="0"
+       id="text3"><textPath
+         xlink:href="#circle_outer"
+         startOffset="50%"
+         id="textPath2">Bra Size</textPath></text>
+  </g>
+</svg>
