@@ -79,8 +79,8 @@ jobs:
               run: |
                   git config user.name "github-actions[bot]"
                   git config user.email "github-actions[bot]@users.noreply.github.com"
-                  git add bra-images/**/*.html
-                  git add bra-images/**/*.json
+                  find bra-images -name "*.html" -exec git add {} +
+                  find bra-images -name "*.json" -exec git add {} +
 
                   if git diff --cached --quiet; then
                     echo "No changes to commit."
