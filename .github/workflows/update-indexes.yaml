@@ -62,17 +62,17 @@ jobs:
                   done
 
                   # Generate bra-images/index.html to list all model folders
-                  bra-images_index="bra-images/index.html"
-                  echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Index of bra-images/</title></head><body>" > "$bra-images_index"
-                  echo "<h1>Index of /bra-images/</h1><ul>" >> "$bra-images_index"
+                  indexFile="bra-images/index.html"
+                  echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Index of bra-images/</title></head><body>" > "$indexFile"
+                  echo "<h1>Index of /bra-images/</h1><ul>" >> "$indexFile"
 
                   for dir in bra-images/*/; do
                     [ -d "$dir" ] || continue
                     dname=$(basename "$dir")
-                    echo "<li><a href=\"$dname/\">$dname/</a></li>" >> "$bra-images_index"
+                    echo "<li><a href=\"$dname/\">$dname/</a></li>" >> "$indexFile"
                   done
 
-                  echo "</ul></body></html>" >> "$bra-images_index"
+                  echo "</ul></body></html>" >> "$indexFile"
             - name: Commit and push changes
               run: |
                   git config user.name "github-actions[bot]"
