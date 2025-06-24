@@ -20,18 +20,20 @@ jobs:
                   # MIME types / extensions to match as image files
                   IMAGE_EXTENSIONS="jpg jpeg png webp gif bmp svg tiff"
 
-                  # Generate index.html and metadata.json inside each folder
-                  for dir in bra-images/*/; do
-                    [ -d "$dir" ] || continue
+                  # Ensure bra-images exists
+                  mkdir -p bra-images
 
+                  # Process all directories including bra-images itself
+                  for dir in $(find bra-images -type d); do
                     # index.html
-                    index_file="${dir}index.html"
+                    index_file="${dir}/index.html"
                     echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Index of ${dir}</title></head><body>" > "$index_file"
                     echo "<h1>Index of /${dir}</h1><ul>" >> "$index_file"
 
-                    for file in "$dir"*; do
+                    for file in "$dir"/*; do
+                      [ -f "$file" ] || continue
                       fname=$(basename "$file")
-                      if [ "$fname" != "index.html" ]; then
+                      if [ "$fname" != "index.html" ] && [ "$fname" != "metadata.json" ]; then
                         echo "<li><a href=\"$fname\">$fname</a></li>" >> "$index_file"
                       fi
                     done
@@ -39,13 +41,13 @@ jobs:
                     echo "</ul></body></html>" >> "$index_file"
 
                     # metadata.json
-                    metadata_file="${dir}metadata.json"
+                    metadata_file="${dir}/metadata.json"
                     echo '{' > "$metadata_file"
                     echo '  "images": [' >> "$metadata_file"
 
                     first=true
                     for ext in $IMAGE_EXTENSIONS; do
-                      for img in "$dir"*.$ext; do
+                      for img in "$dir"/*.$ext; do
                         [ -f "$img" ] || continue
                         fname=$(basename "$img")
                         if [ "$first" = true ]; then
@@ -61,25 +63,24 @@ jobs:
                     echo '}' >> "$metadata_file"
                   done
 
-                  # Generate bra-images/index.html to list all model folders
-                  indexFile="bra-images/index.html"
-                  echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Index of bra-images/</title></head><body>" > "$indexFile"
-                  echo "<h1>Index of /bra-images/</h1><ul>" >> "$indexFile"
+                  # Generate bra-images/index.html to list all subfolders
+                  root_index="bra-images/index.html"
+                  echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Index of bra-images/</title></head><body>" > "$root_index"
+                  echo "<h1>Index of /bra-images/</h1><ul>" >> "$root_index"
 
-                  for dir in bra-images/*/; do
-                    [ -d "$dir" ] || continue
+                  for dir in $(find bra-images -mindepth 1 -maxdepth 1 -type d); do
                     dname=$(basename "$dir")
-                    echo "<li><a href=\"$dname/\">$dname/</a></li>" >> "$indexFile"
+                    echo "<li><a href=\"$dname/\">$dname/</a></li>" >> "$root_index"
                   done
 
-                  echo "</ul></body></html>" >> "$indexFile"
+                  echo "</ul></body></html>" >> "$root_index"
+
             - name: Commit and push changes
               run: |
                   git config user.name "github-actions[bot]"
                   git config user.email "github-actions[bot]@users.noreply.github.com"
-                  git add bra-images/index.html
-                  git add bra-images/*/index.html
-                  git add bra-images/*/metadata.json
+                  git add bra-images/**/*.html
+                  git add bra-images/**/*.json
 
                   if git diff --cached --quiet; then
                     echo "No changes to commit."
