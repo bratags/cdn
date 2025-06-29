@@ -6,7 +6,7 @@
    data-date-format="longDate"
    version="1.1"
    id="svg3"
-   sodipodi:docname="bratagsUsername.svg"
+   sodipodi:docname="ghostSlug.svg"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,7 +22,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1"
-     inkscape:cx="200"
+     inkscape:cx="200.5"
      inkscape:cy="183.5"
      inkscape:window-width="3840"
      inkscape:window-height="2089"
@@ -34,15 +34,15 @@
      id="defs3" />
   <!-- Size Text -->
   <text
-     x="142.63121"
-     y="194.46001"
+     x="144.83788"
+     y="167.41853"
      font-family="Tangerine"
      text-anchor="middle"
      fill="#000000"
      id="text2"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes'"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.78859px;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes';stroke-width:0.39905"><tspan
        font-weight="400"
-       font-size="180px"
+       font-size="71.829px"
        id="tspan1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes'">Slug</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes';stroke-width:0.39905">yaya</tspan></text>
 </svg>
