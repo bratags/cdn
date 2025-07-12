@@ -33,7 +33,7 @@
   <defs
      id="defs3" />
   <!-- Size Text -->
-  <text
+  <g transform="translate(58.574,0) scale(0.596,1)"><text
      x="144.83788"
      y="167.41853"
      text-anchor="middle"
@@ -42,5 +42,5 @@
        font-weight="400"
        font-size="71.829px"
        id="tspan1"
-       style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes';stroke-width:0.39905" transform="scale(0.442,1)">Brattyandthebeast</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:'Great Vibes';-inkscape-font-specification:'Great Vibes';stroke-width:0.39905">Brattyandthebeast</tspan></text></g>
 </svg>
